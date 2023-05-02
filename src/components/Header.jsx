@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ActiveLink from './ActiveLink';
+
 const Header = () => {
     return (
         <div>
@@ -9,10 +11,10 @@ const Header = () => {
                 </div>
                 <div className="flex-none gap-2">
                 <div className="form-control">
-                        <button className='text-xl font-semibold'>Home</button>
+                <ActiveLink to={'/'}><button className='text-xl font-semibold'>Home</button></ActiveLink> 
                 </div>
                 <div className="form-control  mx-10">
-                        <button className='text-xl font-semibold'>Blog</button>
+                    <ActiveLink to={'/blog'}><button className='text-xl font-semibold'>Blog</button></ActiveLink>  
                 </div>
                 <div className="form-control mr-5">
                         <button className='text-xl font-semibold'>Click to Pdf</button>
