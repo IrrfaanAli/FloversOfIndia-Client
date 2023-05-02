@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar  bg-slate-300 p-5">
                 <div className="flex-1">
                     <a className="btn btn-ghost normal-case text-4xl font-bold">Flavors of India.</a>
                 </div>
@@ -14,7 +14,7 @@ const Header = () => {
                 <div className="form-control  mx-10">
                         <button className='text-xl font-semibold'>Blog</button>
                 </div>
-                <div className="form-control  mx-10">
+                <div className="form-control mr-5">
                         <button className='text-xl font-semibold'>Click to Pdf</button>
                 </div>
   
