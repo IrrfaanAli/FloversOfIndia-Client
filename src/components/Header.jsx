@@ -14,6 +14,9 @@ const Header = () => {
                 <div className="form-control  mx-10">
                         <button className='text-xl font-semibold'>Blog</button>
                 </div>
+                <div className="form-control  mx-10">
+                        <button className='text-xl font-semibold'>Click to Pdf</button>
+                </div>
   
                     <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
