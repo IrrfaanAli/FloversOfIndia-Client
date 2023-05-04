@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import ActiveLink from './ActiveLink';
+import { AuthContext } from '../providers/AuthProvider';
+import { Link } from 'react-router-dom';
+
 
 const Header = () => {
+
+     const{user,logout} = useContext(AuthContext);
+     console.log(user);
+
+     const handleLogOut  = () =>{
+        logout()
+        .then()
+        .catch(error =>{
+            console.log(error);
+        })
+     }
+    
+
     return (
         <div>
             <div className="navbar  bg-slate-300 p-5">
@@ -17,16 +33,12 @@ const Header = () => {
                     <ActiveLink to={'/blog'}><button className='text-xl font-semibold'>Blog</button></ActiveLink>  
                 </div>
                 <div className="form-control mr-5">
-                        <button className='text-xl font-semibold'>Click to Pdf</button>
+                        <button className='text-xl font-semibold'></button>
                 </div>
   
-                    <div className="dropdown dropdown-end">
-                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                            <div className="w-10 rounded-full">
-                                <img src="" />
-                            </div>
-                        </label>
-                        
+                    <div>
+                        {user ? <button onClick={handleLogOut}>LogOut</button> : 
+                        <Link to={'/login'}><button>LogIn</button></Link>}
                     </div>
                 </div>
             </div>
