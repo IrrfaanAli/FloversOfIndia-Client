@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { HiHeart } from "react-icons/hi";
 
 const Card = (props) => {
-    const {chef_id,picture_url,name,years_of_experience,number_of_recipes,like } = props.chefs;
+    const {chef_id,picture_url,name,years_of_experience,number_of_recipes,likes} = props.chefs;
     
 
     return (
@@ -14,11 +15,11 @@ const Card = (props) => {
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">{name}</h2>
-                    <p>{years_of_experience}</p>
-                    <p>{number_of_recipes}</p>
-                    <p>{like}</p>
+                    <p> Experience : {years_of_experience} Years</p>
+                    <p > Recipe : {number_of_recipes} Items</p>
+                    <p className='flex gap-1'> <HiHeart></HiHeart>{likes} Likes</p>
                     <div className="card-actions">
-                     <Link to={`/chef/${chef_id}`}>  <button className="btn btn-primary">View Recipes</button></Link>  
+                     <Link to={`/chef/${chef_id}`}>  <button className="btn bg-slate-300 text-black hover:text-white">View Recipes</button></Link>  
                     </div>
                 </div>
             </div>

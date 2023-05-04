@@ -2,13 +2,16 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
-import { Outlet } from "react-router-dom";
+import { Outlet} from "react-router-dom";
 
 const Main = () => {
+
     return (
         <div>
              <Header></Header>      
+             
               <Outlet></Outlet>
+              
               <Footer></Footer>
         </div>
     );

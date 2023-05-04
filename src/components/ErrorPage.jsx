@@ -3,9 +3,9 @@ import React from 'react';
 const ErrorPage = () => {
     return (
         <div>
-            <h1>this is error page</h1>
+            <img className='h-1/2 w-1/2 mx-auto' src="/3828537.jpg" alt="" />
         </div>
     );
 };
 
-export default ErrorPage;<h1>this is error page</h1>
+export default ErrorPage;

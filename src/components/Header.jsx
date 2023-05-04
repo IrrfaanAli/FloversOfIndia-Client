@@ -37,7 +37,7 @@ const Header = () => {
                 </div>
   
                     <div>
-                        {user ? <button onClick={handleLogOut}>LogOut</button> : 
+                        {user ? <div className='flex gap-2'> <div> <p>{user.displayName}</p></div><button onClick={handleLogOut}>LogOut</button></div> : 
                         <Link to={'/login'}><button>LogIn</button></Link>}
                     </div>
                 </div>
