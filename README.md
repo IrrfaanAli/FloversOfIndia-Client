@@ -1,2 +1,9 @@
-# b7a10-chef-recipe-hunter-client-side-IrrfaanAli
-b7a10-chef-recipe-hunter-client-side-IrrfaanAli created by GitHub Classroom
+# Flavors of India
+- 6 Indina chefs
+- All the chefs individula recipes is here
+- convert blog page to pdf
+- authentication 
+- recipe info 
+
+
+live link : chefs-recipe-client.web.app
