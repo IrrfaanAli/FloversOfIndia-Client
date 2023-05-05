@@ -4,7 +4,7 @@ import { AuthContext } from '../providers/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 
 const Registration = () => {
-    const [error,setError] =useState('');
+    const [error,setError] = useState('');
     const { createUser } = useContext(AuthContext);
  
     const handleRegister = event =>{
@@ -68,7 +68,7 @@ const Registration = () => {
                 </label>
                 <input type="text" placeholder="Type here" name='url' className="input input-bordered w-full max-w-xs" />
 
-                <button type='submit' className='bg-black text-white  p-2 mt-3'>Register</button>
+                <button type='submit' className='bg-orange-500 text-white p-2 rounded my-2'>Register</button>
             </form>
           <p >Already Register? <Link to={'/login'}><span className='bg-white text-green-300 font-bold'>LogIn </span></Link></p> 
            <p className='text-red-500'>{error}</p>

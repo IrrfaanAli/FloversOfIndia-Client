@@ -18,8 +18,9 @@ const Home = () => {
                 {navigation.state === 'loading' && <progress className="progress w-56"></progress>}
              </div>
              <CookSection></CookSection>
+             <HelloSection></HelloSection>
               <TodayMenu></TodayMenu>
-              <HelloSection></HelloSection>
+             
              
         </div>
     );

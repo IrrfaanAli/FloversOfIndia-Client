@@ -7,7 +7,7 @@ const chefsSection = () => {
 
   useEffect(() => {
 
-    fetch('http://localhost:5000/')
+    fetch('https://assignment10-taupe.vercel.app/')
       .then(res => res.json())
       .then(data => setChefs(data))
 
@@ -16,11 +16,12 @@ const chefsSection = () => {
   }, [])
 
   return (
-
-    <div className='flex  gap-4 p-10'>
-
+     <>
+    <p className='text-2xl font-bold  ml-1 lg:ml-5 mt-5'>Chefs Section</p>
+    <div className='flex-col   lg:grid grid-cols-3 gap-4 mx-10 lg:mx-72  p-5'>
+    
       {
-        chefs.map((chef) =>
+         chefs?.map((chef) =>
 
           <Card
             key={chef.id}
@@ -34,6 +35,7 @@ const chefsSection = () => {
 
       }
     </div>
+    </>
   );
 };
 

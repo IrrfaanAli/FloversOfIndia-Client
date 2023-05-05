@@ -3,8 +3,13 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../firebase/firebase.config'
+import { FirebaseError } from 'firebase/app';
 
 const LogIn = () => {
+
+    const { user } = useContext(AuthContext);
+    const [err,setErr] = useState('');
+    
     
     const auth = getAuth(app);
     const GoogleProvider = new GoogleAuthProvider();
@@ -18,17 +23,17 @@ const LogIn = () => {
         const form = event.target;
 
         const email = form.email.value;
+
         const password = form.password.value;
 
-        
-
+    
         userlogin(email, password)
             .then(result => {
                 const loggedUser = result.user;
                  navigate('/');             
             })
-            .catch(err=> {
-             console.log(err)
+            .catch(error=> {
+            setErr(error.message);
             })
          
         
@@ -56,10 +61,12 @@ const LogIn = () => {
             console.log(error);
         })
     }
+   
     return (
         <div>
-            <div className="form-control w-full max-w-xs">
+            <div className="form-control w-full max-w-xs mx-auto">
                 <form onSubmit={handleLogIn}>
+                <p className='text-red-500'>{err}</p>
                     <label className="label">
                         <span className="label-text"> Email</span>
                     </label>
@@ -68,14 +75,16 @@ const LogIn = () => {
                         <span className="label-text">Password</span>
                     </label>
                     <input type="password" placeholder="Type here" name='password' className="input input-bordered w-full max-w-xs" />
-                    <button type='submit' className='bg-black text-white mt-3'>LogIn</button>
+                    <button type='submit' className='bg-orange-500 text-white p-2 rounded my-2'>LogIn</button>
                 </form>
-                <button onClick={handleGoolgeSignIn}>Google </button>
-                <button onClick={handleGithubSignIn}>Github </button>
+                <button className='bg-green-300 text-black p-2 rounded my-1' onClick={handleGoolgeSignIn}>Google </button>
+                <button className='bg-orange-400 text-white p-2 rounded my-1'onClick={handleGithubSignIn}>Github </button>
                 
-                <Link to={'/register'}>Register</Link>
+                <p > Donot have Account? <Link to={'/register'}><span className='bg-white text-green-300 font-bold'>Register </span></Link></p> 
+                
             </div>
             
+              
         </div>
     );
 };

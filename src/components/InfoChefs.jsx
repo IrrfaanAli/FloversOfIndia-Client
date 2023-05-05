@@ -28,7 +28,7 @@ const InfoChefs = () => {
             <div>
                  
             <div className='flex gap-4 p-10 ml-72'>
-                    {info.recipes.map((r) => <RecipeInfo key={r.recipe_name} rf={r}></RecipeInfo>)}
+                    {info?.recipes?.map((r) => <RecipeInfo key={r.recipe_name} rf={r}></RecipeInfo>)}
             </div>
             
             </div>
