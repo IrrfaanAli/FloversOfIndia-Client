@@ -36,7 +36,7 @@ const BlogPage = () => {
                         <button></button>
                         <div className="form-control mr-5">
                             <Pdf targetRef={ref} filename="code-example.pdf">
-                                {({ toPdf }) => <button onClick={toPdf} className='text-xl text-black text-semibold'>Generate Pdf</button>}
+                                {({ toPdf }) => <button onClick={toPdf} className='bg-orange-400 text-white p-2 rounded'>Generate Pdf</button>}
                             </Pdf>
                         </div>
 
@@ -49,7 +49,7 @@ const BlogPage = () => {
                 </div>
             </div>
 
-            <div ref={ref}>
+            <div className='p-10 my-auto' ref={ref}>
                 <p className='text-2xl font-semibold'> Differences between uncontrolled and controlled components.</p>
                 <p>Definition: Controlled components are managed by their parent component, while uncontrolled components manage their own state internally. <br></br>
                     State management: Controlled components receive state and methods as props from their parent, while uncontrolled components manage their own state internally. <br></br>
