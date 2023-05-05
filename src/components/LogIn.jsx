@@ -64,7 +64,8 @@ const LogIn = () => {
    
     return (
         <div>
-            <div className="form-control w-full max-w-xs mx-auto">
+            <div className="form-control w-full max-w-xs mx-auto my-auto mt-12">
+            <p className='text-4xl font-bold text-center mt-3'>Please Login</p>
                 <form onSubmit={handleLogIn}>
                 <p className='text-red-500'>{err}</p>
                     <label className="label">
@@ -80,7 +81,7 @@ const LogIn = () => {
                 <button className='bg-green-300 text-black p-2 rounded my-1' onClick={handleGoolgeSignIn}>Google </button>
                 <button className='bg-orange-400 text-white p-2 rounded my-1'onClick={handleGithubSignIn}>Github </button>
                 
-                <p > Donot have Account? <Link to={'/register'}><span className='bg-white text-green-300 font-bold'>Register </span></Link></p> 
+                <p > Donot have Account? <Link to={'/register'}><span className='bg-white text-green-300 font-bold '>Register </span></Link></p> 
                 
             </div>
             
