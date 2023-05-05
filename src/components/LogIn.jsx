@@ -64,7 +64,7 @@ const LogIn = () => {
    
     return (
         <div>
-            <div className="form-control w-full max-w-xs mx-auto my-auto mt-12">
+            <div className="form-control w-auto max-w-xs mx-auto mt-20 min-h-screen">
             <p className='text-4xl font-bold text-center mt-3'>Please Login</p>
                 <form onSubmit={handleLogIn}>
                 <p className='text-red-500'>{err}</p>
@@ -76,12 +76,12 @@ const LogIn = () => {
                         <span className="label-text">Password</span>
                     </label>
                     <input type="password" placeholder="Type here" name='password' className="input input-bordered w-full max-w-xs" />
-                    <button type='submit' className='bg-orange-500 text-white p-2 rounded my-2'>LogIn</button>
+                    <button type='submit' className='bg-orange-500 text-white p-2 rounded   my-2'>LogIn</button>
                 </form>
                 <button className='bg-green-300 text-black p-2 rounded my-1' onClick={handleGoolgeSignIn}>Google </button>
                 <button className='bg-orange-400 text-white p-2 rounded my-1'onClick={handleGithubSignIn}>Github </button>
                 
-                <p > Donot have Account? <Link to={'/register'}><span className='bg-white text-green-300 font-bold '>Register </span></Link></p> 
+                <p > Do not have Account? <Link to={'/register'}><span className='bg-white text-green-300 font-bold '>Register </span></Link></p> 
                 
             </div>
             

@@ -48,9 +48,9 @@ const Registration = () => {
        
     }
     return (
-        <div className="form-control w-full max-w-xs mx-auto">
-            <p className='text-4xl font-bold text-center mt-3'>Please Register</p>
-            <form onSubmit={handleRegister}>
+        <div className="form-control w-full max-w-xs mx-auto  mt-20 min-h-screen">
+            <p className='text-4xl font-bold text-center mt-3 '>Please Register</p>
+            <form  onSubmit={handleRegister}>
                 <label className="label">
                     <span className="label-text">Name</span>
                 </label>
